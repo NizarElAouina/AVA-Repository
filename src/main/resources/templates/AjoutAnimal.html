@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div class="row g-0">
+        <div class="col md-6 no-gutters">
+            <div style="height:85vh; width:90%;" class="vet d-flex justify-content-center align-items-center">
+                <img src="https://img.freepik.com/premium-vector/man-with-dog-shows-pet-insurance-blank-happy-male-with-corgi-his-hands-cartoon-flat-vector-illustration-white-background-pet-insurance-consept-with-space-text_528592-517.jpg" width="500px" />
+            </div>
+        </div>
+        <div class="col md-6 no-gutters" style="font-family:'Times New Roman'; margin-top:20px;">
+            <div class="text d-flex justify-content-center align-items-center"> <img src="https://pbs.twimg.com/media/Fn1UnZKWIAAxqfo?format=png&name=small"  width="200px"  /></div>
+            <p class="text d-flex justify-content-center align-items-center"  style="font-size:35px; color:#198754"><a href="/l">Ajouter un animal</a>  </p>
+            <div class="card-body">
+                <form  th:action="@{/AjoutAnimalProcess}" th:object="${animal}" method="post">
+
+                    <div class="mb-3">
+                        <label>Esepèce            :</label>  <select th:field="*{espece}" name="espece" id="espece" class="btn btn-success dropdown-toggle">
+                        <option value="chien">Chien</option>
+                        <option value="chat">Chat</option>
+                    </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Race        </label> <input type="text" name="race" th:field="*{race}" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Age                :</label> <select name="age" th:field="*{age}" id="age" class="btn btn-success dropdown-toggle">
+                        <option value="1">1</option>
+                        <option value="2">2</option><option value="3">3</option>
+                        <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
+                    </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>Type d'abonnement  :</label> <select name="typeAbonnement" th:field="*{typeAbonnement}" id="typeAbonnement" class="btn btn-success dropdown-toggle">
+                        <option value="essentiel">Essentiel</option>
+                        <option value="medium">Medium</option><option value="premium">Premium</option>
+                    </select>
+                    </div>
+
+                    <input type="hidden" id="idUser" name="idUser" th:value="${user.getUser().idUser}" />
+                    <!--
+                    <span th:text="${user.getUser().idUser}"></span>
+                    <div class="mb-3">
+                        <label>Code Client :</label> <input type="text"
+                                                            name="idClient" class="form-control">
+                    </div>-->
+
+                    <button class="btn btn-primary col-md-12 bg-success">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

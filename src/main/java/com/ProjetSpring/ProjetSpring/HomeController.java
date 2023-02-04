@@ -41,6 +41,8 @@ public class HomeController {
         return "/login";
     }
 
+
+
     @GetMapping("/users")
     public String users(Model model, Principal principal){
         CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
@@ -73,6 +75,15 @@ public class HomeController {
         List<Animal> listAnimal = animalRepo.findByUserIdUser(idUser);
         model.addAttribute("listAnimal", listAnimal);
         return "/InfosUser";
+    }
+
+    @GetMapping("/ParamsUser/{idUser}")
+    public String ParamsUser(Model model,Principal principal, @PathVariable Long idUser){
+        CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
+        model.addAttribute("user", userDetails);
+        List<Animal> listAnimal = animalRepo.findByUserIdUser(idUser);
+        model.addAttribute("listAnimal", listAnimal);
+        return "/ParamsUser";
     }
 
     @PostMapping("/AjoutAnimalProcess")

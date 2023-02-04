@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <p>Hello Params</p>
+</section>
+<section>
+    <section>
+        <span th:text="${user.getUser().idUser}"></span>
+        <span th:text="${user.getUser().username}"></span>
+        <span th:text="${user.getUser().CIN}"></span>
+        <span th:text="${user.getUser().nom}"></span>
+        <span th:text="${user.getUser().prenom}"></span>
+    </section>
+</section>
+
+</body>
+</html>

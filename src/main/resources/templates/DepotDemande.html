@@ -3,19 +3,13 @@
       th:replace="~{base::layout(~{::section})}">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Déposer une demande</title>
 </head>
 <body>
 <section>
     <div class="row g-0">
-        <div class="col md-6 no-gutters">
-            <div style="height:85vh; width:90%;" class="vet d-flex justify-content-center align-items-center">
-                <img src="https://img.freepik.com/premium-vector/man-with-dog-shows-pet-insurance-blank-happy-male-with-corgi-his-hands-cartoon-flat-vector-illustration-white-background-pet-insurance-consept-with-space-text_528592-517.jpg" width="500px" />
-            </div>
-        </div>
         <div class="col md-6 no-gutters" style="font-family:'Times New Roman'; margin-top:20px;">
             <div class="text d-flex justify-content-center align-items-center"> <img src="https://pbs.twimg.com/media/Fn1UnZKWIAAxqfo?format=png&name=small"  width="200px"  /></div>
-            <p class="text d-flex justify-content-center align-items-center"  style="font-size:35px; color:#198754"><a href="/l">Ajouter un animal</a>  </p>
             <div class="card-body">
                 <form  th:action="@{/AjoutDemandeProcess}" th:object="${demande}" method="post">
 
@@ -29,10 +23,14 @@
                     </div>
 
                     <div class="mb-3">
-                        <label>Intervention vétérinaires</label> <input type="text" name="intervention" th:field="*{intervention}" class="form-control">
+                        <label>Intervention vétérinaires</label> <!--<input type="text" name="intervention" th:field="*{intervention}" class="form-control">-->
+                        <select name="intervention" th:field="*{intervention}" id="intervention" class="btn btn-success dropdown-toggle">
+                            <option value="Chirurgie">Chirurgie</option>
+                            <option value="Visite_medicale">Visite médicale</option><option value="Medicaments">Médicaments</option><option value="Autres">Autres</option>
+                        </select>
                     </div>
 
-                    <input type="hidden" id="idUser" name="idUser" th:value="${user.getUser().idUser}" />
+                    <input type="hidden" id="idUser" name="idUser" th:value="${user.getUser().idUser}" /> <br><br>
                     <!--
                     <span th:text="${user.getUser().idUser}"></span>
                     <div class="mb-3">
@@ -42,6 +40,11 @@
 
                     <button class="btn btn-primary col-md-12 bg-success">Enregistrer</button>
                 </form>
+            </div>
+        </div>
+        <div class="col md-6 no-gutters">
+            <div style="height:85vh; width:90%;" class="vet d-flex justify-content-center align-items-center">
+                <img src="https://pbs.twimg.com/media/FoHyAxZXkAM4HRX?format=png&name=small" width="500px" />
             </div>
         </div>
     </div>

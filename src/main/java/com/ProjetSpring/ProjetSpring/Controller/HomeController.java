@@ -3,11 +3,13 @@ import com.ProjetSpring.ProjetSpring.CustomUserDetails;
 import com.ProjetSpring.ProjetSpring.Repository.AnimalRepository;
 import com.ProjetSpring.ProjetSpring.Repository.ContactRepository;
 import com.ProjetSpring.ProjetSpring.Repository.DemandeRepository;
+import com.ProjetSpring.ProjetSpring.Service.UserService;
 import com.ProjetSpring.ProjetSpring.UserRepository;
 import com.ProjetSpring.ProjetSpring.model.Animal;
 import com.ProjetSpring.ProjetSpring.model.Contact;
 import com.ProjetSpring.ProjetSpring.model.DemandeRemboursement;
 import com.ProjetSpring.ProjetSpring.model.User;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,9 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
+    private UserService userService;
+
+    @Autowired
     private ContactRepository contactRepo;
 
     @Autowired
@@ -28,7 +33,6 @@ public class HomeController {
     private UserRepository userRepo;
     @Autowired
     private AnimalRepository animalRepo;
-
 
     @GetMapping("")
     public String home(){
@@ -118,5 +122,29 @@ public class HomeController {
         contact.setUser(existingUser);
         contactRepo.save(contact);
         return "redirect:/users"; }
+
+    // Added this method (createClient)
+    /**/
+    @PostMapping("/createUser")
+    public String createUser(@ModelAttribute User user, HttpSession session) {
+        boolean f = userService.checkUsername(user.getUsername());
+        if (f) {
+            session.setAttribute("msg","Client déja existant, veuillez vous connecter ou changez de coordonnées");
+        }
+        else {
+            //System.out.println(user);
+            User userDtls = userService.createUser(user);
+            if(userDtls != null) {
+                session.setAttribute("msg","Enregistré!");
+            }else {
+                session.setAttribute("msg","Erreur du serveur");
+            }
+        }
+        //clientService.save(client);
+        return "redirect:/login";
+    }
+    // End of the method
+
+
 
 }

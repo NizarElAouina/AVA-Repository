@@ -74,13 +74,16 @@ public class HomeController {
 
     @GetMapping("/Connection")
     public String Connection(){
-
         return "Connection";
     }
     @GetMapping("/chat")
     public String chat(){
-
         return "chat";
+    }
+
+    @GetMapping("/Chien")
+    public String Chien(){
+        return "Chien";
     }
 
     @GetMapping("/Historique/{idUser}")
@@ -110,7 +113,14 @@ public class HomeController {
     @GetMapping("/pack")
     public String pack(){
 
-        return "pack";
+        return "/pack";
+    }
+
+    @GetMapping("/packs")
+    public String packs(Model model, Principal principal){
+        CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
+        model.addAttribute("user", userDetails);
+        return "/packs";
     }
 
     @GetMapping("/logout")

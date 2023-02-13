@@ -2914,7 +2914,7 @@ ul {
                 </a>
             </li>
             <li>
-                <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" href="">
+                <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/packs}">
                     <i class="fas fa-solid fa-box"></i>
                     <span>Packs d'assurance</span>
                 </a>
@@ -2962,6 +2962,7 @@ ul {
                     <thead>
                     <tr >
                         <td >Identifiant Animal</td>
+                        <td >Nom de l'animal</td>
                         <td >Espèce</td>
                         <td >Race</td>
                         <td >Age</td>
@@ -2971,6 +2972,7 @@ ul {
                     <tbody>
                     <tr th:each="animal: ${listAnimal}">
                         <td th:text="${animal.idAnimal}"></td>
+                        <td th:text="${animal.nom}"></td>
                         <td th:text="${animal.espece}"></td>
                         <td th:text="${animal.race}"></td>
                         <td th:text="${animal.age}"></td>

@@ -2890,7 +2890,7 @@ ul {
         </a>
       </li>
       <li>
-        <a style="color:white;" class="active d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/InfosUser/{idUser}(idUser=${user.getUser().idUser})}">
+        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/InfosUser/{idUser}(idUser=${user.getUser().idUser})}">
           <i class="fas fa-solid fa-cat"></i>
           <span>Mes animaux assurés</span>
         </a>
@@ -2908,13 +2908,13 @@ ul {
         </a>
       </li>
       <li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/Historique/{idUser}(idUser=${user.getUser().idUser})}">
+        <a style="color:white;" class="active d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/Historique/{idUser}(idUser=${user.getUser().idUser})}">
           <i class="fa fa-eye" ></i>
           <span>Voir mes demandes</span>
         </a>
       </li>
       <li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" href="">
+        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/packs}">
           <i class="fas fa-solid fa-box"></i>
           <span>Packs d'assurance</span>
         </a>
@@ -2953,10 +2953,10 @@ ul {
       </div>
     </div>
 
-    <h1 class="p-relative" style="color: #198754;">Mes animaux assurés</h1>
+    <h1 class="p-relative" style="color: #198754;">Demandes de remboursement précédentes</h1>
     <!-- Start Projects Table -->
     <div class="projects p-20 bg-white rad-10 m-20">
-      <h2 class="mt-0 mb-20">Informations sur mes animaux assurés</h2>
+      <h2 class="mt-0 mb-20">Historique de demande de remboursement.</h2>
       <div class="responsive-table">
         <table class="fs-15 w-full">
           <thead>
@@ -2964,6 +2964,8 @@ ul {
             <th scope="col">Identifiant Demande</th>
             <th scope="col">Lien de facture</th>
             <th scope="col">Type d'intervention</th>
+            <th scope="col">Identifiant Animal</th>
+            <th scope="col">Nom de l'animal</th>
           </tr>
           </thead>
           <tbody>
@@ -2972,6 +2974,7 @@ ul {
             <td ><a th:href="${demandeRemboursement.Factures}" target="_blank">Cliquez ici pour télécharger la facture.</a></td>
             <td th:text="${demandeRemboursement.intervention}"></td>
             <td th:text="${demandeRemboursement.animal.getIdAnimal()}"></td>
+            <td th:text="${demandeRemboursement.animal.getNom()}"></td>
 
             <!--
             <td th:text="${demandeRemboursement.idDemande}"></td>

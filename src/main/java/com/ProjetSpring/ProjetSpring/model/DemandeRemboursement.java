@@ -28,6 +28,7 @@ public class DemandeRemboursement {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private int idDemande;
     private String Factures;
+    private String nom;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "idClient", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -61,6 +62,14 @@ public class DemandeRemboursement {
 
     public void setFactures(String factures) {
         Factures = factures;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        nom = nom;
     }
 
     public Animal getAnimal() {

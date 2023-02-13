@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <title> Assurance chat</title>
+</head>
+
+<body style="background-color:white;">
+
+<section>
+    <style>
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #198754;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #198754;
+}
+   input::placeholder {
+        color: #198754;
+      }
+    .free-quote {
+
+ background-image: url(../images/quote-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 120px 0px;
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.free-quote .section-heading {
+  margin-bottom: 60px;
+}
+
+
+
+.free-quote .section-heading .line-dec {
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.free-quote form {
+  background-color: #fff;
+  display: inline-block;
+  width: 100%;
+  min-height: 80px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.free-quote form input {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 10px;
+  color: #afafaf;
+  font-weight: 400;
+  font-size: 15px;
+  height: 40px;
+  background-color: transparent;
+  border-bottom: 1px solid #198754;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  position: relative;
+  z-index: 2;
+  outline: none;
+}
+
+.free-quote form button {
+  width: 100%;
+  height: 80px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  outline: none;
+  border: none;
+  margin-left: 30px;
+  background-color: #726ae3;
+  font-size: 15px;
+  color: #fff;
+}
+
+
+  </style>
+    <!--
+    <style>
+    .pricing-tables {
+  padding-top: 130px;
+}
+
+.pricing-tables  .section-heading {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pricing-tables  .section-heading p {
+  margin-top: 10px;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+.pricing-item-regular {
+  margin-top: 30px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
+  border-radius: 50px;
+  padding: 90px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pricing-item-regular:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+  background-image: url(../images/regular-table-top.png);
+  z-index: 0;
+  content: '';
+  width: 274px;
+  height: 221px;
+}
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.border-button a {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  color: #4b8ef1 !important;
+  border: 1px solid #4b8ef1;
+  text-transform: capitalize;
+  font-size: 15px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 23px;
+  font-weight: 500 !important;
+  letter-spacing: 0.3px !important;
+  transition: all .5s;
+}
+
+.border-button a:hover {
+  background-color: #4b8ef1;
+  color: #fff !important;
+}
+
+
+
+.pricing-item-regular:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  background-image: url(../images/regular-table-bottom.png);
+  z-index: 0;
+  content: '';
+  width: 370px;
+  height: 171px;
+}
+
+.pricing-item-regular span.price {
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  font-weight: 700;
+  z-index: 1;
+  left: 30px;
+  top: 30px;
+}
+
+.pricing-item-regular h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.pricing-item-regular .icon img {
+  width: 120px;
+  height: 106px;
+  margin-bottom: 30px;
+}
+
+.pricing-item-regular ul li {
+  color: #4b8ef1;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.pricing-item-regular ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.pricing-item-regular ul li.non-function {
+  color: #afafaf;
+  text-decoration: line-through;
+}
+
+.pricing-item-regular .border-button {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.pricing-item-pro {
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
+  border-radius: 50px;
+  padding: 120px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pricing-item-pro:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-image: url(../images/pro-table-top.png);
+  z-index: 0;
+  content: '';
+  width: 281px;
+  height: 251px;
+}
+
+.pricing-item-pro:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image: url(../images/pro-table-bottom.png);
+  z-index: 0;
+  content: '';
+  width: 100%;
+  height: 201px;
+}
+
+.pricing-item-pro span.price {
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  font-weight: 700;
+  z-index: 1;
+  left: 30px;
+  top: 30px;
+}
+
+.pricing-item-pro h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.pricing-item-pro .icon img {
+  width: 120px;
+  height: 106px;
+  margin-bottom: 30px;
+}
+
+.pricing-item-pro ul li {
+  color: #4b8ef1;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.pricing-item-pro ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.pricing-item-pro ul li.non-function {
+  color: #afafaf;
+  text-decoration: line-through;
+}
+
+.pricing-item-pro .border-button {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
+.section-heading {
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading h4 {
+  color: #2a2a2a;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.section-heading h4 em {
+  font-style: normal;
+  color: #4b8ef1;
+}
+
+.section-heading img {
+  width: 45px;
+  height: 2px;
+}
+
+.section-heading p {
+  margin-top: 10px;
+}
+.services  .section-heading p {
+  margin-top: 10px;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+.services .section-heading {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services .section-heading .line-dec {
+  margin: 0 auto;
+}
+
+  </style>
+  -->
+    <!--
+<div id="pricing" class="pricing-tables">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading">
+                    <h4>Nos Packs</h4>
+                    <img src="assets/images/heading-line-dec.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="pricing-item-regular">
+                    <span class="price"> 50 dhs/mois</span>
+                    <h4>Pack Essentiel </h4>
+                    <div class="icon">
+                        <img src="https://images.squarespace-cdn.com/content/v1/59b387a2f7e0abec5d1aafd2/1612831639362-KNQVRFFA0AY14YL6HJVF/pet-1.png?format=500w"  width="300px"  />
+
+                    </div>
+                    <ul>
+
+                        <li>Remboursement de 50% des frais de visites vétérinaires.</li>
+                        <li>Remboursement de 50% des frais de médicaments.</li>
+                        <li>Remboursement de 60% d'internventions chirurgicales.</li>
+
+                        <li class="non-function">More Options</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="pricing-item-pro">
+                    <span class="price"> 80 dhs/mois</span>
+                    <h4>Pack Medium </h4>
+                    <div class="icon">
+                        <img src="https://images.squarespace-cdn.com/content/v1/59b387a2f7e0abec5d1aafd2/1612831641121-YMJN2CJYFCILLX48TQDS/pet-6.png?format=500w"  width="300px"  />
+
+                    </div>
+                    <ul>
+                        <li>Remboursement de 70% des frais de visites vétérinaires.</li>
+                        <li>Remboursement de 75% des frais de médicaments.</li>
+                        <li>Remboursement de 75% d'internventions chirurgicales</li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="pricing-item-regular">
+                    <span class="price"> 120 dhs/mois</span>
+                    <h4>Pack Premium </h4>
+                    <div class="icon">
+                        <img src="https://images.squarespace-cdn.com/content/v1/59b387a2f7e0abec5d1aafd2/1612831641789-ORYU9DCIH76EPI7256TH/pet-8.png?format=500w"  width="300px"  />
+
+                    </div>
+                    <ul>
+                        <li>Remboursement de 80% des frais de visites vétérinaires.</li>
+                        <li>Remboursement de 80% des frais de médicaments.</li>
+                        <li>Remboursement de 90% d'internventions chirurgicales.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+    <style>
+        /* home */
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://cdn.pixabay.com/photo/2022/12/31/14/32/cat-7688749__480.jpg) no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.home .content{
+  max-width: 60rem;
+}
+
+
+
+.home .wave{
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 12rem;
+}
+
+
+/* end */
+:root{
+  --main: #ff6e01;
+  --bg: #f1e1d2;
+  --black: #000;
+  --white: #fff;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+/* about */
+
+.about .box-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+
+.about .deco-title{
+  font-size: 10rem;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 0.5;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(204,204,204);
+  transform-origin: top left;
+  transform: rotate(0.25turn);
+  position: absolute;
+  top: 115%;
+  left: 48%;
+  z-index: -1;
+}
+
+.about .box-container .image{
+  flex: 1 1 31rem;
+}
+
+.about .box-container .image img{
+  width: 100%;
+}
+
+.about .content{
+  flex: 1 1 41rem;
+}
+
+.about .content .title{
+     padding-top: 83px;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.about .content p{
+  font-size: 1.3rem;
+    color: #444;
+    padding: 0rem 124px 0px 0px;
+    line-height: 2;
+}
+
+.about .content .icons-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 3rem;
+}
+
+.about .content .icons-container .icons{
+  flex: 1 1 16rem;
+  text-align: center;
+  background: var(--bg);
+  padding: 3rem 2rem;
+}
+
+.about .content .icons-container .icons .fas{
+  height: 5rem;
+  font-size: 4rem;
+  color: var(--main);
+}
+
+.about .content .icons-container .icons h3{
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  color: #444;
+  font-weight: normal;
+}
+
+    </style>
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3 style="margin-bottom:60px;margin-top:41px;color:white;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Nos assurances chat
+            </h3>
+
+        </div>
+
+        <img src="https://pbs.twimg.com/media/FotoKG3XEAAeRpq?format=png&name=large" alt="" class="wave">
+
+    </section>
+</section>
+    <!-- about -->
+
+    <section class="about" id="about" style="display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6rem;">
+
+
+
+        <div class="box-container">
+
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2018/06/03/08/57/cat-3449999__480.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3 class="title">Nos assurances chat</h3>
+                <p><i class="fa fa-solid fa-circle-check"></i>Vos frais vétérinaires sont remboursés jusqu'à 100% en cas de consultations, d’hospitalisation, de maladies ...<br>
+
+                    <i class="fas fa-solid fa-circle-check"></i>Pas d’examen médical requis pour assurer votre animal<br>
+                    <i class="fas fa-solid fa-circle-check"></i>Traitement des feuilles de soins en 48 h<br>
+                    <i class="fas fa-solid fa-circle-check"></i>Des garanties maintenues tout au long de la vie de votre animal</p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- end -->
+
+
+<section>
+
+    <div class="row g-0">
+        <div class="col md-6 no-gutters" style="margin-left: -1px;margin-top: 41px;margin-bottom: -122px;">
+            <div  class="Present  justify-content-center align-items-center">
+                <img src="https://www.pawlicy.com/_next/image/?url=%2Fassets%2Flanding-page-for-vets%2FvetOfficeScene.png&w=2048&q=75"  width="100%"  />
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Footer -->
+<section class="text-center text-lg-start  text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="bg-success">
+        <br><br>
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-light">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">
+                        <i class="fas fa-gem me-3" ></i>AVA
+                    </h6>
+                    <p >
+                        AVA : Assurez vos animaux, est la première assurance pour animaux au Maroc.
+                        AVA propose des packs d'assurance pour garantir ses services à toutes les classes sociales.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-light" style="">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">
+                        Nos Packs
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Essentiel</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Medium</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Premium</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-light">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">
+                        Nos réseaux sociaux.
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Instagram</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Facebook</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Twitter</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Linkedin</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-light">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> 12 Bd Ziraoui, Casablanca, Maroc</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        contact@AVA.ma
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> + 212 5 22 23 23 24</p>
+                    <p><i class="fas fa-print me-3"></i> + 212 5 22 23 24 24</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+</section>
+<!-- Footer -->
+<section>
+<footer class="bg-dark p-2 text-center">
+    <div class="container">
+        <p style="    margin-top: 15px;" class="text-white">All Right Reserved By @AVA</p>
+    </div>
+</footer>
+</section>
+</body>
+</html>

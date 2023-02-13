@@ -1,4 +1,5 @@
 package com.ProjetSpring.ProjetSpring.Controller;
+
 import com.ProjetSpring.ProjetSpring.CustomUserDetails;
 import com.ProjetSpring.ProjetSpring.Repository.AnimalRepository;
 import com.ProjetSpring.ProjetSpring.Repository.ContactRepository;
@@ -15,14 +16,35 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
 import java.security.Principal;
 import java.util.List;
+
 @Controller
 public class HomeController {
-
     @Autowired
     private UserService userService;
-
+    // Added this method (createClient)
+    /**/
+    @PostMapping("/createUser")
+    public String createUser(@ModelAttribute User user, HttpSession session) {
+        boolean f = userService.checkUsername(user.getUsername());
+        if (f) {
+            session.setAttribute("msg","Client déja existant, veuillez vous connecter ou changez de coordonnées");
+        }
+        else {
+            //System.out.println(user);
+            User userDtls = userService.createUser(user);
+            if(userDtls != null) {
+                session.setAttribute("msg","Enregistré!");
+            }else {
+                session.setAttribute("msg","Erreur du serveur");
+            }
+        }
+        //clientService.save(client);
+        return "redirect:/login";
+    }
+    // End of the method
     @Autowired
     private ContactRepository contactRepo;
 
@@ -33,6 +55,7 @@ public class HomeController {
     private UserRepository userRepo;
     @Autowired
     private AnimalRepository animalRepo;
+
 
     @GetMapping("")
     public String home(){
@@ -49,6 +72,26 @@ public class HomeController {
         return "/login";
     }
 
+    @GetMapping("/Connection")
+    public String Connection(){
+
+        return "Connection";
+    }
+    @GetMapping("/chat")
+    public String chat(){
+
+        return "chat";
+    }
+
+    @GetMapping("/Historique/{idUser}")
+    public String Historique(Model model,Principal principal, @PathVariable Long idUser){
+        CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
+        model.addAttribute("user", userDetails);
+        List<DemandeRemboursement> listDemandeRemboursement = demandeRepo.findByUserIdUser(idUser);
+        model.addAttribute("listDemandeRemboursement", listDemandeRemboursement);
+        return "/Historique";
+    }
+
     @GetMapping("/Contacter")
     public String Contacter(Model model, Principal principal){
         CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
@@ -57,6 +100,7 @@ public class HomeController {
         return "Contacter";
     }
 
+
     @GetMapping("/users")
     public String users(Model model, Principal principal){
         CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
@@ -64,10 +108,17 @@ public class HomeController {
         return "users";
     }
 
+    @GetMapping("/pack")
+    public String pack(){
+
+        return "pack";
+    }
+
     @GetMapping("/logout")
     public String logout(){
         return "/logout";
     }
+
     @GetMapping("/AjoutAnimal")
     public String AjoutAnimal(Model model, Principal principal){
         CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
@@ -90,6 +141,17 @@ public class HomeController {
         model.addAttribute("listAnimal", listAnimal);
         return "/InfosUser";
     }
+
+    //@GetMapping("/History")
+    //public String History(){
+        /*
+        Model model,Principal principal, @PathVariable Long idUser
+        CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
+        model.addAttribute("user", userDetails);
+        List<Animal> listAnimal = animalRepo.findByUserIdUser(idUser);
+        model.addAttribute("listAnimal", listAnimal);*/
+        //return "/History";
+    //}
 
     @GetMapping("/ParamsUser/{idUser}")
     public String ParamsUser(Model model,Principal principal, @PathVariable Long idUser){
@@ -122,29 +184,5 @@ public class HomeController {
         contact.setUser(existingUser);
         contactRepo.save(contact);
         return "redirect:/users"; }
-
-    // Added this method (createClient)
-    /**/
-    @PostMapping("/createUser")
-    public String createUser(@ModelAttribute User user, HttpSession session) {
-        boolean f = userService.checkUsername(user.getUsername());
-        if (f) {
-            session.setAttribute("msg","Client déja existant, veuillez vous connecter ou changez de coordonnées");
-        }
-        else {
-            //System.out.println(user);
-            User userDtls = userService.createUser(user);
-            if(userDtls != null) {
-                session.setAttribute("msg","Enregistré!");
-            }else {
-                session.setAttribute("msg","Erreur du serveur");
-            }
-        }
-        //clientService.save(client);
-        return "redirect:/login";
-    }
-    // End of the method
-
-
 
 }

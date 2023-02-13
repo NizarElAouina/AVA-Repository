@@ -9,12 +9,15 @@
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
 </head>
 <body class="bg-light">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success" style="">
+
+<nav class="navbar navbar-expand-lg navbar-light "  style="z-index: 2; height: 69px;width: 100%;position: fixed;box-shadow: 3px 3px 5px 6px #ccc;background-color:white;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/" style="margin-left: 20px;">AVA : Assurez vos animaux </a>
+    <a class="navbar-brand" href="/login" style="margin-left: 20px;font-size:20px"><img style=" width: 143px;" src="https://pbs.twimg.com/media/FoWugigWYAAhtXh?format=png&name=small"/> </a>
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -24,7 +27,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active"
-                                aria-current="page" href="#EspaceClient">Espace Client</a></li>
+                                aria-current="page" href="#" STYLE="color:#198754;   margin: 0px 30px 0px 350px;font-weight: 700;line-height: 29px;"><i class="fas fa-dog"></i> ASSURANCE CHIEN</a></li>
+        <li class="nav-item"><a class="nav-link active" th:href="@{/chat}"
+                                aria-current="page" href="#" STYLE=" color:#198754;   margin: 0px 30px 0px 30px;font-weight: 700;line-height: 29px;"><i class="fas fa-cat"></i> ASSURANCE CHAT</a></li>
+        <li class="nav-item"><a class="nav-link active" th:href="@{/Connection}"  STYLE="color:#198754;font-weight: 700;line-height: 29px;    margin: 0px 30px 0px 30px;"><i class="fas fa-solid fa-user"></i> ESPACE CLIENT</a></li>
+
 
 
       </ul>

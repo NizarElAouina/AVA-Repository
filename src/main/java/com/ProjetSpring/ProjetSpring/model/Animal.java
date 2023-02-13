@@ -26,8 +26,10 @@ public class Animal {
     private int idAnimal;
     private String espece;
     private String race;
+    private String nom;
     private int age;
     private String typeAbonnement;
+    private String sexe;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "idUser", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -52,7 +54,17 @@ public class Animal {
         this.race = race;
         this.age = age;
         this.typeAbonnement = typeAbonnement;
+        this.nom=nom;
+        this.sexe=sexe;
     }
+    public String getSexe() {
+        return sexe;
+    }
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
+    }
+
+
     public int getIdAnimal() {
         return idAnimal;
     }
@@ -64,6 +76,12 @@ public class Animal {
     }
     public void setEspece(String espece) {
         this.espece = espece;
+    }
+    public String getNom() {
+        return nom;
+    }
+    public void setNom(String nom) {
+        this.nom = nom;
     }
     public String getRace() {
         return race;

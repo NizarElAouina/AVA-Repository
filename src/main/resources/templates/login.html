@@ -7,34 +7,308 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <title>Acceuil</title>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include the Owl Carousel plugin -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <title>Document</title>
+  <script>
+    $(".client_owl-carousel").owlCarousel({
+    loop: true,
+    margin: 0,
+    dots: false,
+    nav: true,
+    navText: [],
+    autoplay: true,
+    autoplayHoverPause: true,
+    navText: [
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+    ],
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        }
+    }
+});
+
+  </script>
+
+
 </head>
+
 <body>
 
 <section>
   <section>
     <div class="row g-0">
       <div class="col md-6 no-gutters">
-        <div style="height:85vh; width:90%;font-family:'Times New Roman'" class="Present  justify-content-center align-items-center"> <br><br><br><br><br>
-          <p style="font-size:100px; color:#198754" class="text d-flex justify-content-center align-items-center">AVA <br></p>
-          <p style="font-size:40px; color:#198754" class="text d-flex justify-content-center align-items-center">Assurez vos animaux</p>
-          <p class="text d-flex justify-content-center align-items-center"  style="font-size:25px">La première assurance pour animaux au Maroc.</p>
-          <p class="text d-flex justify-content-center align-items-center"  style="font-size:25px">Parce que votre compagnon le mérite.</p>
+        <div style="height:85vh; width:100%;font-family:'Times New Roman'" class="Present  justify-content-left "> <br><br><br><br><br>
+
+
+          <p class="text d-flex justify-content-left  "  style="color:#198754;margin-top: 111px;margin-left:63px;font-family: 'Jacques Francois';font-style: normal;font-size: 33px;line-height: 63px;mix-blend-mode: normal;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+            AVA,<br> La première Assurance Marocaine
+            pour animaux de compagnie!</p>
+
         </div>
       </div>
       <div class="col md-6 no-gutters">
         <div style="height:85vh; width:90%;" class="vet d-flex justify-content-center align-items-center">
-          <img src="https://www.insurdinary.ca/wp-content/uploads/2020/04/illustration-woman-on-sofa-with-pet.svg"  width="570px"  />
+          <img src="https://www.insurdinary.ca/wp-content/uploads/2020/04/illustration-woman-on-sofa-with-pet.svg"  width="600px"  />
         </div>
       </div>
     </div>
   </section>
 
+  <section id="about" class="about section-padding" style="padding:50px;margin-top:40px;">
+
+    <div class="container">
+      <div class="row" style="box-shadow: 3px 3px 5px 6px #ccc;background-color:white;padding: 27px;">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img style="height: 380px;" src="https://media.istockphoto.com/id/525616077/photo/playing-with-cats-and-dogs-in-the-beautiful-outdoors.jpg?b=1&s=170667a&w=0&k=20&c=IOLWweR68SPfUyYgHDmbe2i3y6jnDRn9EkVGARYkqWk=" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+          <div class="about-text" style="margin-top:-40px;">
+            <h2 style="color:#198754;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); ">L'assurance AVA ,  <br/> comment ça marche</h2>
+            <p style="text-align:justify;">L’assurance <b> AVA </b>, abréviation d’<b> Assurez Vos Animaux </b>, décrite exclusivement comme seule et première assurance au Maroc qui a pour but principal de permettre aux propriétaires des animaux de compagnies d’accéder aux meilleurs soins vétérinaires afin de sauver la vie de leurs compagnons.
+              Elle permet d’oublier carrément les soucis des visites chez les vétérinaires tout en supprimant toutes les préoccupations et les crises financières dans les moments inattendus.
+              <br>Petits bobos, maladies ou accidents pour votre animal ? Découvrez comment AVA
+              vous accompagne pour prendre soin de la santé de votre chien ou chat. Faites remplir
+              votre feuille de soins en fin de consultation chez le Vétérinaire et on s'occupe du reste.<br> Avec des garanties adaptées, nous sommes là pour vous rembourser vos dépenses chez le vétérinaire !</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--section id="about" class="about section-padding" style="padding:50px;">
+
+   <div class="container">
+     <div class="row" style="    padding: 49px 49px 29px 49px;box-shadow: 3px 3px 5px 6px #ccc;background-color:white;padding: 27px;">
+       <div class="">
+         <div class="about-text" style="margin-top:-40px;">
+           <h2 style="       margin-top: 41px;color:#198754;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); ">AVA: numéro 1 de l’Assurance Santé pour animaux de compagnie</h2>
+           <p style="text-align:justify;"> L’assurance <b> AVA </b>, abréviation d’<b> Assurez Vos Animaux </b>, décrite exclusivement comme seule et première assurance au Maroc qui a pour but principal de permettre aux propriétaires des animaux de compagnies d’accéder aux meilleurs soins vétérinaires afin de sauver la vie de leurs compagnons.
+             Elle permet d’oublier carrément les soucis des visites chez les vétérinaires tout en supprimant toutes les préoccupations et les crises financières dans les moments inattendus.</p>
+
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+  <Services-->
+  <section class="page-section " id="services">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase" style="margin-bottom: 60px;margin-top: 41px;color:#198754;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); ">Nos services</h2>
+
+      </div>
+      <div class="row text-center">
+
+        <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-success"></i>
+                            <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
+                        </span>
+          <h4 class="my-3">Des conseillers à votre écoute</h4>
+          <p class="text-muted">AVA mis à votre disposition des agens santé animale pour vous conseiller sur le bien-etre de votre animale</p>
+        </div>
+        <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-success"></i>
+                            <i class="fas fa-umbrella fa-stack-1x fa-inverse"></i>
+                        </span>
+          <h4 class="my-3">Une couverture optimale</h4>
+          <p class="text-muted">AVA comprend les besoins et les risques de ses clients,et elle propose des couvertures adaptées pour les couvrir adéquatement.</p>
+        </div>
+        <div class="col-md-4">
+                        <span  class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-success " ></i>
+                            <i class="fas fa-newspaper fa-stack-1x fa-inverse"></i>
+                        </span>
+          <h4 class="my-3">Annonce des animaux perdus </h4>
+          <p class="text-muted">Grace à sa forte présence sur les réseaux sociaux, AVA publie les annonces des annimaux perdus  au profis de ses clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end client section -->
+  <style>
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #198754;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #198754;
+}
+   input::placeholder {
+        color: #198754;
+      }
+    .free-quote {
+  background-image: url(../images/quote-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 120px 0px;
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.free-quote .section-heading {
+  margin-bottom: 60px;
+}
+
+
+
+.free-quote .section-heading .line-dec {
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.free-quote form {
+  background-color: #fff;
+  display: inline-block;
+  width: 100%;
+  min-height: 80px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.free-quote form input {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 10px;
+  color: #afafaf;
+  font-weight: 400;
+  font-size: 15px;
+  height: 40px;
+  background-color: transparent;
+  border-bottom: 1px solid #198754;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  position: relative;
+  z-index: 2;
+  outline: none;
+}
+
+.free-quote form button {
+  width: 100%;
+  height: 80px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  outline: none;
+  border: none;
+  margin-left: 30px;
+  background-color: #726ae3;
+  font-size: 15px;
+  color: #fff;
+}
+
+
+  </style>
+  <div style="margin: 0px 56px;margin-top: 60px;box-shadow: 3px 3px 5px 6px #ccc;background-color:white;padding: 27px;" id="free-quote" class="free-quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h2 class="section-heading text-uppercase" style="margin-bottom: 60px;margin-top: 41px;color:#198754;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); ">Contactez-nous</h2>
+
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+          <form id="search" action="#" method="GET">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input type="address" name="web" class="website" placeholder="Votre adresse mail..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input  name="address" class="email" placeholder="Votre message..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4" >
+                <fieldset>
+                  <button style="background-color:#198754;" type="submit" class="main-button">Envoyer</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--section class="services section-padding" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h2 style="color:#198754;">Les avis Clients </h2>
+            <p style="color:#198754;">Nos adhérents témoignent</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-white text-center  pb-2" style="background-color:#198754;">
+            <div class="card-body">
+              <i class="bi bi-laptop"></i>
+
+              <p class="lead">Je n’ai jamais eu aucun problème avec AVA qui a toujours répondu à mes attentes. </p>
+              <p class="card-title">Benoufir A. , suite à une expérience du 05/10/2022</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-journal"></i>
+              <h3 class="card-title">Sustainability</h3>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+              <button class="btn bg-warning text-dark">Read More</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-intersect"></i>
+              <h3 class="card-title">Integrity</h3>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+              <button class="btn bg-warning text-dark">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
     <hr style="color:#105736; height:7px;margin-right:50px; margin-left:50px">
     <div class="row g-0">
@@ -46,7 +320,6 @@
       <div class="col md-6 no-gutters" style="font-family:'Times New Roman'">
         <div style="height:85vh; width:90%;" class="Present  justify-content-center align-items-center"> <br>
           <p style="font-size:100px; color:#198754" class="text d-flex justify-content-center align-items-center">AVA <br></p>
-          <!--  <p style="font-size:40px; color:#198754" class="text d-flex justify-content-center align-items-center">Assurez vos animaux</p>-->
           <p class="text d-flex justify-content-center align-items-center"  style="font-size:25px">Chez AVA, on fait passer la santé de votre petite boule de poil en premier.</p>
           <p class="text d-flex justify-content-center align-items-center"  style="font-size:25px">Ainsi, les visites chez le vétérinaire ne représenteront plus de soucis financiers pour vous, grâce à
             nos packs d'assurance, pouvant aller jusqu'à 90% des frais remboursés des interventions vétérinaires.</p>
@@ -57,7 +330,7 @@
   </section>
 
   <section>
-    <hr style="color:#105736; height:7px;margin-right:50px; margin-left:50px">
+
     <div class="row g-0">
       <div class="col md-6 no-gutters" style="margin-left: 70px;font-family:'Times New Roman'">
         <div style="height:85vh; width:90%;font-family:'Times New Roman'" class="Present  justify-content-center align-items-center">
@@ -91,14 +364,17 @@
         </div>
       </div>
     </div>
-  </section>
+  </section-->
+
+<!--
+
   <section >
     <br><br><br><br><br><br>
     <hr style="color:#105736; height:7px;margin-right:50px; margin-left:50px;font-family:'Times New Roman'">
     <div class="row g-0" style="" id="EspaceClient">
       <div class="col md-6 no-gutters" style="margin-top:0px">
         <div style="height:85vh; width:90%;" class="vet d-flex justify-content-center align-items-center">
-          <img src="https://theswiftest.com/wp-content/uploads/2021/07/the-swiftest-pet-insurance.png"  width="500px"  />
+          <img src="https://theswiftest.com/wp-content/uploads/2021/07/the-swiftest-pet-insurance.png"  width="600px"  />
         </div>
       </div>
       <div class="col md-6 no-gutters" style="margin-right:30px;margin-top:150px;font-family:'Times New Roman'">
@@ -114,7 +390,7 @@
             </div>
             <label>Mot de passe</label> <input type="password"
                                                name="password" class="form-control">
-             </div>
+        </div>
 
         <button class="btn btn-primary col-md-12 bg-success">Se connecter</button>
         </form>
@@ -127,9 +403,7 @@
     <div class="row g-0">
       <div class="col md-6 no-gutters" style="margin-left:30px;margin-top:30px;">
         <div class="card-header text-center fs-4">Devenir client!</div>
-       <!-- <th:block th:if="${session.msg}">
-          <p class="text-center fs-4 text-success">[[${session.msg}]]</p>
-        </th:block>-->
+
 
         <div class="card-body">
           <form action="createClient" method="post">
@@ -167,10 +441,11 @@
       </div>
     </div>
   </section>
+  -->
   <section>
-    <hr style="color:#105736; height:7px;margin-right:50px; margin-left:50px;font-family:'Times New Roman'">
+
     <div class="row g-0">
-      <div class="col md-6 no-gutters" style="margin-left: 80px;">
+      <div class="col md-6 no-gutters" style="margin-left: -1px;margin-top: 41px;margin-bottom: -122px;">
         <div  class="Present  justify-content-center align-items-center">
           <img src="https://www.pawlicy.com/_next/image/?url=%2Fassets%2Flanding-page-for-vets%2FvetOfficeScene.png&w=2048&q=75"  width="100%"  />
         </div>
@@ -179,7 +454,7 @@
     </div>
   </section>
   <!-- Footer -->
-  <footer class="text-center text-lg-start  text-muted">
+  <section class="text-center text-lg-start  text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
 
@@ -262,9 +537,13 @@
       </div>
     </section>
     <!-- Section: Links  -->
-  </footer>
+  </section>
   <!-- Footer -->
-
+  <footer class="bg-dark p-2 text-center">
+    <div class="container">
+      <p style="    margin-top: 15px;" class="text-white">All Right Reserved By @AVA</p>
+    </div>
+  </footer>
 
 </body>
 </html>

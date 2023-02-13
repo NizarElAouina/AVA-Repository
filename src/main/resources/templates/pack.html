@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="" />
-  <link rel="stylesheet" href="css/all.min.css" />
-  <link rel="stylesheet" href="css/framework.css" />
-  <link rel="stylesheet" href="css/master.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-  <title>Espace client</title>
+    <title>Nos packs d'assurance</title>
 </head>
 <style>
   :root {
@@ -64,7 +69,7 @@ ul {
 /* Start Sidebar */
 .sidebar {
   width: 250px;
-  box-shadow: 0 0 10px #ddd;
+
 }
 .sidebar > h3 {
   margin-bottom: 50px;
@@ -230,7 +235,7 @@ ul {
   transition: 0.3s;
 }
 .welcome .visit:hover {
-  background-color: var(--blue-alt-color);
+  background-color: #198754;
 }
 @media (max-width: 767px) {
   .welcome .intro {
@@ -255,7 +260,7 @@ ul {
   cursor: pointer;
 }
 .quick-draft .save:hover {
-  background-color: var(--blue-alt-color);
+  background-color: #198754;
 }
 /* End Quick Draft Widget */
 /* Start Targets */
@@ -296,7 +301,7 @@ ul {
   transform: translateX(-50%);
 }
 .targets .details .progress > .blue span::after {
-  border-top-color: var(--blue-color);
+  border-top-color: #198754;
 }
 .targets .details .progress > .orange span::after {
   border-top-color: var(--orange-color);
@@ -396,7 +401,7 @@ ul {
   left: 11px;
   width: 2px;
   height: 100%;
-  background-color: var(--blue-color);
+  background-color: #198754;
 }
 .last-project ul li::before {
   content: "";
@@ -411,7 +416,7 @@ ul {
   z-index: 1;
 }
 .last-project ul li.done::before {
-  background-color: var(--blue-color);
+  background-color: #198754;
 }
 .last-project ul li.current::before {
   animation: change-color 0.8s infinite alternate;
@@ -1445,71 +1450,66 @@ ul {
 </style>
 <body>
 <div class="page d-flex">
-  <div class="sidebar bg-success p-20 p-relative">
-    <a class="navbar-brand" href="/users" style="margin-left: 20px;font-size:20px"><img style=" width: 143px;margin-bottom: 20px;
+    <div class="sidebar bg-success p-20 p-relative">
+        <a class="navbar-brand" href="/users" style="margin-left: 20px;font-size:20px"><img style=" width: 143px;margin-bottom: 20px;
     margin-left: -7px;" src="https://pbs.twimg.com/media/FooClf6XsAAuamu?format=png&name=small"/> </a>
-    <ul>
+        <ul>
 
-      <li>
-        <a class=" active d-flex align-center fs-14 c-black rad-6 p-10" href="/users" style="box-shadow: 3px 3px 5px 0px;
-    background-color: #198754;
-    color: white;">
-          <i class="fas fa-user"></i>
-          <span>Profil</span>
-        </a>
-      </li>
-      <li>
-        <a style="color:white;" class=" d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/InfosUser/{idUser}(idUser=${user.getUser().idUser})}">
-          <i class="fas fa-solid fa-cat"></i>
-          <span>Mes animaux assurés</span>
-        </a>
-      </li>
-      <li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10"  th:href="@{/AjoutAnimal}">
-          <i class="fas fa-solid fa-plus"></i>
-          <span>J'ajoute un animal</span>
-        </a>
-      </li>
-      <li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/DepotDemande}">
-          <i class="fa fa-undo"></i>
-          <span>Demander un remboursement</span>
-        </a>
-      </li>
-      <li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/Historique/{idUser}(idUser=${user.getUser().idUser})}">
-          <i class="fa fa-eye" ></i>
-          <span>Voir mes demandes</span>
-        </a>
-      </li>
-      <!--<li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/History}">
-          <i class="fa fa-eye" ></i>
-          <span>Voir mes demandes</span>
-        </a>
-      </li>-->
-      <li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/pack}">
-          <i class="fas fa-solid fa-box"></i>
-          <span>Packs d'assurance</span>
-        </a>
-      </li>
-      <li>
-        <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/Contacter}">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <span>Contacter AVA</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="content w-full">
-    <!-- Start Head -->
-    <div class="head bg-white p-15 between-flex">
-      <div class="search p-relative">
-       <h2   style="color:#198754;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); "> Bienvenue dans votre espace utilisateur</h2>
-      </div>
+            <li>
+                <a style="color:white;" class="  d-flex align-center fs-14 c-black rad-6 p-10" href="/users" >
+                    <i class="fas fa-user"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/InfosUser/{idUser}(idUser=${user.getUser().idUser})}">
+                    <i class="fas fa-solid fa-cat"></i>
+                    <span>Mes animaux assurés</span>
+                </a>
+            </li>
+            <li>
+                <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10"  th:href="@{/AjoutAnimal}">
+                    <i class="fas fa-solid fa-plus"></i>
+                    <span>J'ajoute un animal</span>
+                </a>
+            </li>
+            <li>
+                <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/DepotDemande}">
+                    <i class="fa fa-undo"></i>
+                    <span>Demander un remboursement</span>
+                </a>
+            </li>
+            <li>
+                <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/Historique}">
+                    <i class="fa fa-eye" ></i>
+                    <span>Voir mes demandes</span>
+                </a>
+            </li>
+            <li>
+                <a style="color:white;" class="d-flex align-center fs-14 c-black rad-6 p-10" href="">
+                    <i class="fas fa-solid fa-box"></i>
+                    <span>Packs d'assurance</span>
+                </a>
+            </li>
+            <li>
+                <a style="color:white;" class="active  d-flex align-center fs-14 c-black rad-6 p-10" th:href="@{/Contacter}">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Contacter AVA</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
-      <div><a  style="
+
+    <div class="content w-full">
+        <div class="head bg-white p-15 between-flex">
+            <div class="search p-relative">
+                <h2   style="color:#198754;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); "> Bienvenue dans votre espace utilisateur</h2>
+            </div>
+            <div class="icons d-flex align-center">
+
+
+                <a  style="
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: var(--bs-nav-link-font-size);
     font-weight: var(--bs-nav-link-font-weight);
@@ -1517,312 +1517,282 @@ ul {
     text-decoration: none;
     font-size: 31px;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;"
-               aria-current="page" href="/logout"> <i class="fas fa-sign-out-alt"></i></a></div>
+                    aria-current="page" href="/logout"> <i class="fas fa-sign-out-alt"></i></a>
+
+
+
+            </div>
+        </div>
+        <h1 class="p-relative" style="color: #198754;">Paks d'assurance</h1>
+
+        <div class="quick-draft p-20 bg-white rad-10 m-20">
+            <h2 class="mt-0 mb-10">Nos packs</h2>
+            <p class="mt-0 mb-20 c-grey fs-15">Découvrez nos packs d'assurance!</p>
+            <div class="plans-page d-grid m-20 gap-20">
+                <div class="plan green bg-white p-20">
+                    <div class="top bg-green txt-c p-20">
+                        <h2 class="m-0 c-white">Free</h2>
+                        <div class="price c-white"><span>$</span>0.00</div>
+                    </div>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Text Lessons</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Videos Lessons</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Appear On Leaderboard</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>Browse Content Without Ads</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>Access All Assignments</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>Get Daily Prizes</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>Earn Certificate</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>1 GB Space For Hosting Files</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>Access Badge System</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-shape bg-green c-white d-block w-fit">Join</a>
+                </div>
+                <!-- Start Plan -->
+                <div class="plan blue bg-white p-20">
+                    <div class="top bg-blue txt-c p-20">
+                        <h2 class="m-0 c-white">Basic</h2>
+                        <div class="price c-white"><span>$</span>7.99</div>
+                    </div>
+                    <ul class="list-none p-0">
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Text Lessons</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Videos Lessons</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Appear On Leaderboard</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Browse Content Without Ads</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Assignments</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Get Daily Prizes</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Earn Certificate</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>1 GB Space For Hosting Files</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark fa-fw"></i>
+                            <span>Access Badge System</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-shape bg-blue c-white d-block w-fit">Join</a>
+                </div>
+                <!-- End Plan -->
+                <!-- Start Plan -->
+                <div class="plan orange bg-white p-20">
+                    <div class="top bg-orange txt-c p-20">
+                        <h2 class="m-0 c-white">Premium</h2>
+                        <div class="price c-white"><span>$</span>19.99</div>
+                    </div>
+                    <ul class="list-none p-0">
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Text Lessons</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Videos Lessons</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Appear On Leaderboard</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Browse Content Without Ads</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access All Assignments</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Get Daily Prizes</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Earn Certificate</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>1 GB Space For Hosting Files</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check fa-fw yes"></i>
+                            <span>Access Badge System</span>
+                            <i class="fa-solid fa-circle-info help"></i>
+                        </li>
+                    </ul>
+                    <p class="c-grey m-0 txt-c">This Is Your Current Plan</p>
+                </div>
+                <!-- End Plan -->
+            </div>
+
+        </div>
+
     </div>
-    <!-- End Head -->
-    <h1 class="p-relative" style="color: #198754;">Profil</h1>
-    <div class="profile-page m-20">
-      <!-- Start Overview -->
-      <div class="overview bg-white rad-10 d-flex align-center">
-        <div class="avatar-box txt-c p-20">
-          <img class="rad-half mb-10" src="https://scontent.fcmn3-1.fna.fbcdn.net/v/t39.30808-6/329503055_2106268799571580_6718846573768744541_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFMzxl4jr3x0SNYNSyenHvVQ8kt9bxN9QhDyS31vE31CCtzbKI1yYA4gQM1mVTu7MGwpydMelO10aWGmN3XnBEX&_nc_ohc=F4RyuBwmrJoAX_kJiwC&_nc_ht=scontent.fcmn3-1.fna&oh=00_AfAqO7jakDrpzm3NEamEJ-ALkRX1gLVxs6OvjT7OueqFyg&oe=63EBDDD0" alt="" />
-
-          <h3 class="m-0"> <span th:text="${user.getUser().nom} "></span>  <span th:text="${user.getUser().prenom}"></span></h3>
-          <p class="c-grey mt-10">Client N° <span th:text="${user.getUser().idUser} "></span>  </p>
-          <div class="level rad-6 bg-eee p-relative">
-            <span style="width: 70%"></span>
-          </div>
-          <div class="rating mt-10 mb-10">
-            <i class="fas fa-solid fa-star c-orange fs-13"></i>
-            <i class="fas fa-solid fa-star c-orange fs-13"></i>
-            <i class="fas fa-solid fa-star c-orange fs-13"></i>
-            <i class="fas fa-solid fa-star c-orange fs-13"></i>
-            <i class="fas fa-solid fa-star c-orange fs-13"></i>
-          </div>
-
-        </div>
-        <div class="info-box w-full txt-c-mobile">
-          <!-- Start Information Row -->
-          <div class="box p-20 d-flex align-center">
-            <h4 class="c-grey fs-15 m-0 w-full" > <b>Informations générales</b></h4>
-            <div class="fs-14">
-              <span class="c-grey">Nom complet:</span>
-              <span th:text="${user.getUser().nom} "></span>  <span th:text="${user.getUser().prenom}"></span>
-            </div>
-            <div class="fs-14">
-              <span class="c-grey">Genre:</span>
-              <span th:text="${user.getUser().genre} "></span>
-            </div>
-            <div class="fs-14">
-              <span class="c-grey">Ville:</span>
-              <span th:text="${user.getUser().pays} "></span>
-            </div>
-
-          </div>
-          <!-- End Information Row -->
-          <!-- Start Information Row -->
-          <div class="box p-20 d-flex align-center">
-            <h4 class="c-grey w-full fs-15 m-0" ><b>Informations personnelles</b></h4>
-            <div class="fs-14">
-              <span class="c-grey">Email:</span>
-              <span th:text="${user.getUser().username}"></span>
-            </div>
-            <div class="fs-14">
-              <span class="c-grey"> &nbsp; &nbsp; Téléphone:</span>
-              <span th:text="${user.getUser().tel} "></span>
-            </div>
-            <div class="fs-14">
-              <span class="c-grey">Date de naissance:</span>
-              <span th:text="${user.getUser().birth} "></span>
-            </div>
-            <div class="fs-14">
-              <label>
-                <span class="c-grey">CIN:</span>
-                <span th:text="${user.getUser().CIN}"></span>
-              </label>
-            </div>
-          </div>
-          <!-- End Information Row -->
-
-        </div>
-      </div>
-      <!-- End Overview -->
-      <!-- Start Other Data -->
-      <div class="other-data d-flex gap-20">
-        <div class="skills-card p-20 bg-white rad-10 mt-20"  style="width:70%;">
-          <h2 class="mt-0 mb-10" style="color: #198754;" >Conditions d'utilisation</h2>
-          <p class="mt-0 mb-20 c-grey fs-15">Il est à noter auprès de nos clients qu'il existent certaines conditions d'utilisations pour notre assurance: </p>
-          <ul class="m-0 txt-c-mobile" style="font-size:15px;">
-            <li style="text-align:justify;">Les animaux (chiens et chats) ayant dépassé l'âge de 12 ans ne sont plus éligibles à nos packs d'assurance</li>
-            <li>Pour modifier le type d'abonnement de votre animal, vous êtes tenus de nous envoyer un message à travers la page de  <a th:href="@{/Contacter}" style="text-decoration: none; color:198754">Contact</a><br>
-            <li>Pour supprimer l'assurance d'un de vos animaux, vous êtes priés de vous rendre dans l'une de nos agences ou de nous envoyer un message à travers la page de  <a th:href="@{/Contacter}" style="text-decoration: none; color:198754">Contact</a><br>
-            <li>Toute annulation d'assurance est effective au début du mois qui suit celui du dépot de la demande
-            <li>Pour être client, vous devez être majeur (18 ans et plus) et posséde un identifiant national (CIN, permis de conduire ou passeport).
-            <li>Certaines informations ne peuvent être changées : Identifiant national, nom et prénom.
-
-          </ul>
-        </div>
-        <div class="activities p-20 bg-white rad-10 mt-20">
-          <h2 class="mt-0 mb-10" style="color: #198754;">Derniers remboursement</h2>
-          <p class="mt-0 mb-20 c-grey fs-15">Mes dernieres activités de remboursement</p>
-          <div class="activity d-flex align-center txt-c-mobile">
-            <img src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__480.jpg" alt="" />
-            <div class="info">
-              <span class="d-block mb-10">Rosa</span>
-              <span class="c-grey">visite_medicale</span>
-            </div>
-            <div class="date">
-              <span class="d-block mb-10">18:10</span>
-              <span class="c-grey">Yesterday</span>
-            </div>
-          </div>
-          <div class="activity d-flex align-center txt-c-mobile">
-            <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374__480.jpg" alt="" />
-            <div class="info">
-              <span class="d-block mb-10">Max</span>
-              <span class="c-grey">Chirurgie</span>
-            </div>
-            <div class="date">
-              <span class="d-block mb-10">16:05</span>
-              <span class="c-grey">15/12/2022</span>
-            </div>
-          </div>
-          <div class="activity d-flex align-center txt-c-mobile">
-            <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374__480.jpg" alt="" />
-            <div class="info">
-              <span class="d-block mb-10">Max</span>
-              <span class="c-grey">Médicaments</span>
-            </div>
-            <div class="date">
-              <span class="d-block mb-10">18:05</span>
-              <span class="c-grey">21/04/2022</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-<!--
-<section>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/users" style="margin-left: 20px;">AVA : Assurez vos animaux </a>
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-          <li class="nav-item"><a class="nav-link active"
-                                  aria-current="page" href="/logout"> Se déconnecter</a></li>
-
-
-        </ul>
-
-      </div>
-    </div>
-  </nav>
-</section>
-<section>
-  <div class="row g-0">
-    <div class="col md-6 no-gutters">
-      <div style="height:85vh; width:90%;" class="vet d-flex justify-content-center align-items-center">
-        <img src="https://img.freepik.com/free-vector/illustration-pet-insurance_53876-37234.jpg?w=2000" width="590px" />
-      </div>
-    </div>
-    <div class="col md-6 no-gutters " style="font-family:'Times New Roman'; margin-top:20px; "><br>
-      <div class="text d-flex justify-content-center align-items-center"> <img src="https://pbs.twimg.com/media/Fn1UnZKWIAAxqfo?format=png&name=small"  width="200px"  /></div><br>
-      <div style="" class="text  justify-content-center margin-left:90px">
-      <p class="text d-flex justify-content"  style="font-size:35px;">Bienvenue dans votre Espace Client  </p>
-          <div class="align-items-center" style="margin-left:0px"> <button type="button" class="row btn btn-success btn-lg btn-block text d-flex justify-content-center align-items-center" style="width:80vh"> <a th:href="@{/AjoutAnimal}" style="text-decoration: none; color:white">J'ajoute un animal</a></button> <br></div>
-          <div class="align-items-center" style="margin-left:0px"> <button type="button" class="row btn btn-success btn-lg btn-block text d-flex justify-content-center align-items-center" style="width:80vh"> <a th:href="@{/DepotDemande}" style="text-decoration: none; color:white">Je dépose une demande de remboursement</a></button> <br></div>
-          <div class="align-items-center" style="margin-left:0px"> <button type="button" class="row btn btn-success btn-lg btn-block text d-flex justify-content-center align-items-center" style="width:80vh"> <a th:href="@{/InfosUser/{idUser}(idUser=${user.getUser().idUser})}" style="text-decoration: none; color:white">Je consulte mes animaux assurés</a></button> <br></div>
-          <div class="align-items-center" style="margin-left:0px"> <button type="button" class="row btn btn-success btn-lg btn-block text d-flex justify-content-center align-items-center" style="width:80vh"> <a th:href="@{/ParamsUser/{idUser}(idUser=${user.getUser().idUser})}" style="text-decoration: none; color:white">Je consulte mes informations</a></button> <br></div>
-        <div class="align-items-center" style="margin-left:0px"> <button type="button" class="row btn btn-success btn-lg btn-block text d-flex justify-content-center align-items-center" style="width:80vh"> <a th:href="@{/Contacter}" style="text-decoration: none; color:white">Nous envoyer un message</a></button> <br></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-<section>
-<div class="row g-0" style="height:50vh; width:90%; margin-right:50px; margin-left:30px">
-  <div class="col md-6 no-gutters">
-    <div  class=""><br><br>
-      <h3 style="color:#198754">Conditions d'utilisation</h3><br>
-
-    <p>Il est à noter auprès de nos clients qu'il existent certaines conditions d'utilisations pour notre assurance <br>
-    Les animaux (chiens et chats) ayant dépassé l'âge de 12 ans ne sont plus éligibles à nos packs d'assurance <br>
-    Pour modifier le type d'abonnement de votre animal, vous êtes tenus de nous envoyer un message à travers la page de  <a th:href="@{/Contacter}" style="text-decoration: none; color:198754">Contact</a><br>
-    Pour supprimer l'assurance d'un de vos animaux, vous êtes priés de vous rendre dans l'une de nos agences ou de nous envoyer un message à travers la page de  <a th:href="@{/Contacter}" style="text-decoration: none; color:198754">Contact</a><br>
-    Toute annulation d'assurance est effective au début du mois qui suit celui du dépot de la demande<br>
-    Pour être client, vous devez être majeur (18 ans et plus) et posséde un identifiant national (CIN, permis de conduire ou passeport).<br>
-    Certaines informations ne peuvent être changées : Identifiant national, nom et prénom.</p>
-    </div>
-  </div>
-</div>
-
-</section>
-
-<section>
-  <section>
-
-
-    <br><a th:href="@{/AjoutAnimal}">Ajouter animal</a>
-    <br> <a th:href="@{/DepotDemande}">Deposer demande</a>
-    <br> <a th:href="@{/InfosUser/{idUser}(idUser=${user.getUser().idUser})}">Consulter mes informations</a>
-  </section>
-</section>
-<section>
-  <br><br><br><br><br>
-  <hr style="color:#105736; height:7px;margin-right:50px; margin-left:50px">
-  <div class="row g-0">
-    <div class="col md-6 no-gutters" style="margin-left: 80px;">
-      <div  class="Present  justify-content-center align-items-center">
-        <img src="https://www.pawlicy.com/_next/image/?url=%2Fassets%2Flanding-page-for-vets%2FvetOfficeScene.png&w=2048&q=75"  width="100%"  />
-      </div>
-    </div>
-
-  </div>
-</section>
--->
 
 <section class="text-center text-lg-start  text-muted">
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
 
-  </section>
-  <!-- Section: Social media -->
+    </section>
+    <!-- Section: Social media -->
 
-  <!-- Section: Social media -->
+    <!-- Section: Social media -->
 
-  <!-- Section: Links  -->
-  <section class="bg-success">
-    <br><br>
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-light">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4 text-light">
-            <i class="fas fa-gem me-3" ></i>AVA
-          </h6>
-          <p >
-            AVA : Assurez vos animaux, est la première assurance pour animaux au Maroc.
-            AVA propose des packs d'assurance pour garantir ses services à toutes les classes sociales.
-          </p>
+    <!-- Section: Links  -->
+    <section class="bg-success">
+        <br><br>
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-light">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">
+                        <i class="fas fa-gem me-3" ></i>AVA
+                    </h6>
+                    <p >
+                        AVA : Assurez vos animaux, est la première assurance pour animaux au Maroc.
+                        AVA propose des packs d'assurance pour garantir ses services à toutes les classes sociales.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-light" style="">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">
+                        Nos Packs
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Essentiel</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Medium</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Premium</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-light">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">
+                        Nos réseaux sociaux.
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Instagram</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Facebook</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Twitter</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Linkedin</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-light">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-light">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> 12 Bd Ziraoui, Casablanca, Maroc</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        contact@AVA.ma
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> + 212 5 22 23 23 24</p>
+                    <p><i class="fas fa-print me-3"></i> + 212 5 22 23 24 24</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-light" style="">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4 text-light">
-            Nos Packs
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Essentiel</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Medium</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Premium</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-light">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4 text-light">
-            Nos réseaux sociaux.
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Instagram</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Facebook</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Twitter</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Linkedin</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-light">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4 text-light">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> 12 Bd Ziraoui, Casablanca, Maroc</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            contact@AVA.ma
-          </p>
-          <p><i class="fas fa-phone me-3"></i> + 212 5 22 23 23 24</p>
-          <p><i class="fas fa-print me-3"></i> + 212 5 22 23 24 24</p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-  <!-- Section: Links  -->
+    </section>
+    <!-- Section: Links  -->
 </section>
-
+<!-- Footer -->
 <footer class="bg-dark p-2 text-center">
-  <div class="container">
-    <p class="text-white">All Right Reserved By @AVA </p>
-  </div>
+    <div class="container">
+        <p class="text-white">All Right Reserved By @AVA </p>
+    </div>
 </footer>
-
-
 </body>
+
 </html>

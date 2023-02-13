@@ -1,5 +1,4 @@
 package com.ProjetSpring.ProjetSpring.Service;
-
 import com.ProjetSpring.ProjetSpring.model.User;
 import org.springframework.context.annotation.Bean;
 

@@ -2969,8 +2969,9 @@ ul {
           <tbody>
           <tr th:each="demandeRemboursement: ${listDemandeRemboursement}">
             <td th:text="${demandeRemboursement.idDemande}"></td>
-            <td th:text="${demandeRemboursement.Factures}"></td>
+            <td ><a th:href="${demandeRemboursement.Factures}" target="_blank">Cliquez ici pour télécharger la facture.</a></td>
             <td th:text="${demandeRemboursement.intervention}"></td>
+            <td th:text="${demandeRemboursement.animal.getIdAnimal()}"></td>
 
             <!--
             <td th:text="${demandeRemboursement.idDemande}"></td>

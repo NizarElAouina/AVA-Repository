@@ -91,16 +91,6 @@ public class HomeController {
         model.addAttribute("listDemandeRemboursement", listDemandeRemboursement);
         return "/Historique";
     }
-
-    @GetMapping("/Historique2/{idUser}")
-    public String Historique2(Model model,Principal principal, @PathVariable Long idUser){
-        CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
-        model.addAttribute("user", userDetails);
-        List<DemandeRemboursement> listDemandeRemboursement = demandeRepo.findByUserIdUser(idUser);
-        model.addAttribute("listDemandeRemboursement", listDemandeRemboursement);
-        return "/Historique2";
-    }
-
     @GetMapping("/Contacter")
     public String Contacter(Model model, Principal principal){
         CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();

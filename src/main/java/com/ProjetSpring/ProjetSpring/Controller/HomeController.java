@@ -72,6 +72,14 @@ public class HomeController {
         return "/login";
     }
 
+    @GetMapping("/Welcome")
+    public String Welcome(Model model, Principal principal){
+        CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
+        model.addAttribute("user", userDetails);
+        return "/Welcome";
+    }
+
+
     @GetMapping("/Connection")
     public String Connection(){
         return "Connection";

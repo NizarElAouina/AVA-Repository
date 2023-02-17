@@ -78,6 +78,12 @@ public class HomeController {
         model.addAttribute("user", userDetails);
         return "/Welcome";
     }
+    @GetMapping("/paypal")
+    public String paypal(Model model, Principal principal){
+        CustomUserDetails userDetails = (CustomUserDetails) ((Authentication) principal).getPrincipal();
+        model.addAttribute("user", userDetails);
+        return "/paypal";
+    }
 
 
     @GetMapping("/Connection")
@@ -184,7 +190,7 @@ public class HomeController {
         User existingUser = userRepo.findById(userId).get();
         animal.setUser(existingUser);
         animalRepo.save(animal);
-        return "redirect:/users"; }
+        return "redirect:/paypal"; }
 
     @PostMapping("/AjoutDemandeProcess")
     public String ajoutDemandeProcess(DemandeRemboursement demande, Model model, @RequestParam("idUser") Long userId, @RequestParam("idAnimal") int animalId)  {
